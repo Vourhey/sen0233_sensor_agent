@@ -17,7 +17,7 @@ class HTU21D(Sensor):
         temp_c = round(self.sensor.temperature, 2)
         humid = round(self.sensor.relative_humidity)
 
-        temp_f = temp_c * 9.0 / 5.0 + 32.0
+        temp_f = round(temp_c * 9.0 / 5.0 + 32.0, 2)
 
         res = {
             "temp_c": temp_c,
