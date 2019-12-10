@@ -11,7 +11,11 @@ mkRosPackage rec {
 
   src = ./.;
 
-  propagatedBuildInputs = [ robonomics_comm python3Packages.pyyaml ];
+  propagatedBuildInputs = [
+    robonomics_comm
+    python3Packages.pyyaml
+    python3Packages.adafruit-circuitpython-htu21d
+  ];
 
   meta = with stdenv.lib; {
     description = "Agent that offers data from sensors";

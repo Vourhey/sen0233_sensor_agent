@@ -1,19 +1,5 @@
 <launch>
-    <arg name="acl" default="" />
-    <node name="trader" pkg="autonomous_agent_template" type="trader_node" output="screen">
-        <!-- Default model for provided service -->
-        <param name="service_model" value="QmeW4LMpuaAMuvNAbLHKN64EY3p3pWNzahhzKB8UCfdkfw" />
-        <!-- Address of a lighthouse you work on, airalab mainnet lighthouse by default -->
-        <param name="lighthouse" value="0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1" />
-        <!-- A unique model Qm...., hello_aira model by default -->
-        <param name="model" value="QmaTLSFvFh2gTv5eUDfpE1YZjiwuPwSq9RpSG9kSJ6Y9W9" />
-        <!-- A token your CPS works with, bridged XRT token by default -->
-        <param name="token" value="0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7" />
-        <!-- Ethereum blocks lifetime, ~12-15 sec for one -->
-        <param name="order_lifetime" value="100" />
-        <!-- Specify access control list file -->
-        <param name="acl" value="$(arg acl)" />
-    </node>
     <node name="worker" pkg="sensors_pack_agent" type="worker_node" output="screen" respawn="true">
+        <param name="model" value="QmWjvXGfVUDBNR15BBH5ERGP3SzEKbeLZWx7Fcp4kwwaw9" />
     </node>
 </launch>

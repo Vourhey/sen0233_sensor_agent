@@ -11,7 +11,6 @@ catkin_package()
 
 catkin_install_python(
     PROGRAMS
-        scripts/trader_node
         scripts/worker_node
     DESTINATION
         ${CATKIN_PACKAGE_BIN_DESTINATION}

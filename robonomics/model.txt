@@ -1,13 +1,7 @@
-Autonomous Agent Template
--------------------------
+Sensors Pack Agent
+------------------
 
-Simple modular AIRA example effort.
+The agent specially made for getting started purpose
 
-
-## Nodes
-
-There are two nodes:
-
-* *trader_node* - to work on offchain negotiations process
-* *worker_node* - trivial liability process executor
+It includes a few sensors, reads the data, packs it in a result message and sends it back to the network
 
