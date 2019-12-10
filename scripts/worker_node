@@ -62,7 +62,7 @@ class WorkerNode:
 
         rospy.loginfo(res)
 
-        self.result_publish(res)
+        self.result_publish.publish(res)
 
     def spin(self):
         rospy.spin()
