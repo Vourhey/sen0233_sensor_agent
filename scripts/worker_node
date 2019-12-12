@@ -13,7 +13,7 @@ from robonomics_msgs.msg import Demand, Result
 from ipfs_common.msg import Multihash
 from ipfs_common.ipfs_rosbag import IpfsRosBag
 
-from sensors_pack_agent.sensors import HTU21D
+from sensors_pack_agent.sensors import SEN0233
 
 class WorkerNode:
 
@@ -25,9 +25,7 @@ class WorkerNode:
 
         self.result_publish = rospy.Publisher('/liability/infochan/eth/signing/result', Result, queue_size=128)
 
-        self.sensors = []
-        self.sensors.append(HTU21D())
-        # self.sensors.append(PM())
+        self.sensor = SEN0233()
 
         rospy.loginfo('Worker node is launched')
 
@@ -48,12 +46,7 @@ class WorkerNode:
     def send_result(self, msg: Demand):
         rospy.loginfo('Starting process...')
 
-        result_dict = {}
-        for s in self.sensors:
-            r = s.data()
-            result_dict.update(r)
-
-        rospy.loginfo(result_dict)
+        result_dict = self.sensor.data()
 
         res = Result()
         res.liability = msg.sender

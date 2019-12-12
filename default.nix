@@ -7,14 +7,13 @@
 mkRosPackage rec {
   name = "${pname}-${version}";
   pname = "sensors_pack_agent";
-  version = "0.1.0";
+  version = "0.2.0";
 
   src = ./.;
 
   propagatedBuildInputs = [
     robonomics_comm
-    python3Packages.pyyaml
-    python3Packages.adafruit-circuitpython-htu21d
+    python3Packages.pyserial
   ];
 
   meta = with stdenv.lib; {
