@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(sensors_pack_agent)
+project(sen0233_sensor_agent)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy

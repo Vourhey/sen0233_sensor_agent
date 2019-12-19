@@ -1,5 +1,5 @@
 <launch>
-    <node name="worker" pkg="sensors_pack_agent" type="worker_node" output="screen" respawn="true">
+    <node name="worker" pkg="sen0233_sensor_agent" type="worker_node" output="screen" respawn="true">
         <param name="model" value="QmWjvXGfVUDBNR15BBH5ERGP3SzEKbeLZWx7Fcp4kwwaw9" />
     </node>
 </launch>

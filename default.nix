@@ -6,8 +6,8 @@
 
 mkRosPackage rec {
   name = "${pname}-${version}";
-  pname = "sensors_pack_agent";
-  version = "0.2.0";
+  pname = "sen0233_sensor_agent";
+  version = "0.3.0";
 
   src = ./.;
 
@@ -18,7 +18,7 @@ mkRosPackage rec {
 
   meta = with stdenv.lib; {
     description = "Agent that offers data from sensors";
-    homepage = http://github.com/vourhey/sensors_pack_agent;
+    homepage = http://github.com/vourhey/sen0233_sensor_agent;
     license = licenses.bsd3;
     maintainers = with maintainers; [ vourhey ];
   };
