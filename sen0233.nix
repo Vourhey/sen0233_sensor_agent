@@ -4,7 +4,7 @@ with lib;
 
 let
   cfg = config.services.sen0233;
-  varDir = "/var/lib/sen0233";
+  varDir = "/var/lib/liability/sen0233";
 
 in {
 
@@ -14,8 +14,8 @@ in {
 
       package = mkOption {
         type = types.package;
-        default = pkgs.sensors_pack_agent;
-        defaultText = "pkgs.sensors_pack_agent";
+        default = pkgs.sen0233_sensor_agent;
+        defaultText = "pkgs.sen0233_sensor_agent";
         description = '' '';
       };
 

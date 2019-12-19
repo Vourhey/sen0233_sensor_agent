@@ -52,10 +52,10 @@ class SEN0233:
         rospy.loginfo("In waiting data: {}".format(self.serialPort.in_waiting))
 
         res = {
-                "temp_c": self.buff.poplef(),
-                "humidity": self.buff.poplef(),
-                "formaldehyde": self.buff.poplef(),
-                "pm2.5": self.buff.poplef()
+                "temp_c": self.buff.popleft(),
+                "humidity": self.buff.popleft(),
+                "formaldehyde": self.buff.popleft(),
+                "pm2.5": self.buff.popleft()
                 }
         rospy.loginfo(res)
         return res
