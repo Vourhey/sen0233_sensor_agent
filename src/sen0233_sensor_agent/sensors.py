@@ -42,7 +42,7 @@ class SEN0233:
 
                     buff.append(round(TPS/10, 2))
                     buff.append(round(HDS/10, 2))
-                    buff.append(FMHDS)
+                    buff.append(round(FMHDS/1000, 3))
                     buff.append(PMS)
                 rospy.sleep(0.5)
 
