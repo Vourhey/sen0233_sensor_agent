@@ -34,6 +34,7 @@ class SEN0233:
                         HDSb = d[33]             # Read Humidity Low 8-bit
                         HDS = (HDSa<<8)+HDSb        # Humidity value
                     else:
+                        self.serialPort.reset_input_buffer()
                         PMS = 0
                         FMHDS = 0
                         TPS = 0
@@ -43,7 +44,7 @@ class SEN0233:
                     buff.append(round(HDS/10, 2))
                     buff.append(FMHDS)
                     buff.append(PMS)
-                rospy.sleep(0.7)
+                rospy.sleep(0.5)
 
         self.reading_thr = Thread(target=read_most_recent_data, args=(self.buff, ))
         self.reading_thr.start()
